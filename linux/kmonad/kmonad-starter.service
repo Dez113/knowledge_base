@@ -1,0 +1,14 @@
+# put to ~/.config/systemd/user/
+# systemtcl --user daemon-reload
+# systemtcl --user start kmonad-starter
+
+[Unit]
+Description=kmonad stater service
+
+[Service]
+#Type=oneshot
+ExecStart=/usr/bin/kmonad /home/dez/stuff/soft/kmonad/kmonad_cf.kbd
+ExecStop=kill $(pgrep - f kmonad_cf.kbd)
+
+[Install]
+WantedBy=default.target
