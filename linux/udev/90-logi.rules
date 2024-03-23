@@ -1,0 +1,6 @@
+# put into /etc/udev/rules.d/
+#keyboard set const name
+ACTION=="add", SUBSYSTEM=="input", ATTRS{name}=="Logitech MX Keys", SYMLINK+="input/mxkeys"
+
+#mouse power/wakeup disable
+ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="046d", ATTRS{bcdDevice}=="0503", ATTRS{idProduct}=="c548", ATTR{power/wakeup}="disabled" 
