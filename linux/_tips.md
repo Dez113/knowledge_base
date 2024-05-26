@@ -12,6 +12,12 @@ sudo sh -c "sync; echo 1 > /proc/sys/vm/drop_caches"
 
 list device info with attributes
 ```
-udevadm info -a -p /sys/devices/pci0000:00/0000:00:02.1/0000:01:00.0/usb1/1-9
+udevadm info -a -p /sys/bus/usb/devices/1-9
 ```
+udev triger device
+```
+sudo udevadm test /sys/bus/usb/devices/1-9
+```
+### Kmonad configure
+sudo usermod -aG input,uinput username
 
