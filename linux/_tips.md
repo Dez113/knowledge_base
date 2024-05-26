@@ -19,5 +19,6 @@ udev triger device
 sudo udevadm test /sys/bus/usb/devices/1-9
 ```
 ### Kmonad configure
+```
 sudo usermod -aG input,uinput username
-
+```
